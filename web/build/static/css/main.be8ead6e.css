@@ -1,0 +1,317 @@
+@import url(https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap);
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900;1000&display=swap');
+
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-family: 'Cairo', sans-serif;
+    height: 100vh;
+    margin: 0
+}
+
+#root {
+    height: 100%
+}
+
+code {
+    font-family: 'Cairo', sans-serif;
+}
+
+.cityhall-panel {
+    background-color: #101418;
+    border-radius: 10px;
+    height: 70%;
+    left: 50%;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width: 60%
+}
+
+.cityhall-panel__header {
+    align-items: center;
+    background-color: #0c0e11;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    display: flex;
+    height: 8%;
+    justify-content: space-between;
+    width: 100%
+}
+
+.cityhall-panel__title {
+    align-items: center;
+    color: gray;
+    font-family: 'Cairo', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 900;
+    text-align: center;
+    text-transform: uppercase;
+    vertical-align: middle
+}
+
+.button-back {
+    color: gray;
+    font-size: 30px;
+    margin-left: 15px;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content
+}
+
+.button-back:hover {
+    color: gray;
+    cursor: pointer
+}
+
+.button-back-hidden {
+    color: transparent;
+    margin-left: 15px
+}
+
+.button-back-hidden,
+.button-close {
+    font-size: 30px;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content
+}
+
+.button-close {
+    color: gray;
+    margin-right: 15px
+}
+
+.button-close:hover {
+    color: gray;
+    cursor: pointer
+}
+
+.container {
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    height: 92%;
+    position: relative
+}
+
+.slider {
+    border-radius: 5px;
+    border-right: 3px solid #0c0e11;
+    height: 100%;
+    left: .1%;
+    position: relative;
+    width: 25%
+}
+
+.button {
+    background: #fff;
+    color: #000;
+    height: 10%;
+    text-align: center;
+    font-family: 'Cairo', sans-serif !important;
+}
+
+.char-info {
+    background: #0c0e11;
+    color: #fff;
+    display: flex;
+    flex-direction: row;
+    font-size: 20px;
+    height: 10%;
+    margin-left: 5%
+}
+
+.data {
+    display: flex;
+    flex-direction: column !important;
+    padding: 5%
+}
+
+.cid {
+    color: #9494948f;
+    font-size: 15px;
+    font-weight: 600
+}
+
+.cid,
+.name {
+    font-family: 'Cairo', sans-serif;
+}
+
+.name {
+    font-size: 20px;
+    font-weight: 500;
+    text-transform: uppercase
+}
+
+.MuiList-root {
+    background-color: #0c0e11 !important;
+    color: #fff !important;
+    font-family: 'Cairo', sans-serif !important;
+    font-weight: 500 !important
+}
+
+.MuiTypography-root {
+    font-size: 1rem !important;
+    margin-left: 10px !important;
+    text-transform: uppercase !important
+}
+
+.MuiListItem-root {
+    padding-bottom: 16px !important;
+    padding-top: 16px !important
+}
+
+.content {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 98%;
+    margin-top: 8px;
+    overflow-y: scroll;
+    width: 100%
+}
+
+::-webkit-scrollbar {
+    width: 5px
+}
+
+::-webkit-scrollbar-track {
+    background-color: initial
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #101418
+}
+
+.main-section {
+    flex-wrap: wrap
+}
+
+.main-section,
+.main-section2 {
+    display: flex;
+    justify-content: center;
+    max-height: 84%;
+    overflow-y: scroll
+}
+
+.main-section2 {
+    flex-wrap: nowrap
+}
+
+.card {
+    background: #181b1d;
+    border-radius: 8px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 280px;
+    justify-content: space-evenly;
+    margin: 16px;
+    padding: 10px;
+    width: 340px
+}
+
+.card-header {
+    display: grid;
+    grid-template-columns: 260px 0;
+    width: 100%
+}
+
+.card-header2 {
+    display: grid;
+    grid-template-columns: 280px 0;
+    width: 100%
+}
+
+.card-icon {
+    background: #26262a;
+    border-radius: 5px;
+    color: #fff;
+    display: flex;
+    height: 50%;
+    justify-content: center;
+    padding: 10px;
+    width: 10%
+}
+
+.card-title {
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 900
+}
+
+.card-desc {
+    color: #80808085
+}
+
+.card-button {
+    display: flex;
+    justify-content: center;
+    font-family: 'Cairo', sans-serif !important;
+}
+
+.card-tag {
+    background: #26262a;
+    border-radius: 3px;
+    color: gray;
+    font-size: 15px;
+    font-weight: 900;
+    height: -webkit-max-content;
+    height: max-content;
+    padding: 5px;
+    text-align: center;
+    width: -webkit-max-content;
+    width: max-content
+}
+
+.MuiButton-root {
+    border-radius: 2px !important;
+    font-size: .8rem !important;
+    padding: 3px 16px !important;
+    width: 98%;
+    font-family: 'Cairo', sans-serif !important;
+}
+
+.card2 {
+    background: #181b1d;
+    border-radius: 8px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 380px;
+    justify-content: space-evenly;
+    margin: 110px 56px 16px;
+    padding: 10px;
+    width: 400px;
+    flex-wrap: nowrap;
+}
+
+.card-icon2 {
+    font-size: 180px
+}
+
+.card-icon2,
+.card-title2 {
+    color: #fff;
+    text-align: center
+}
+
+.card-title2 {
+    font-size: 1.5rem;
+    font-weight: 900;
+}
+
+.card2:hover {
+    background: #303132;
+    cursor: pointer
+}
+
+/*# sourceMappingURL=main.be8ead6e.css.map*/
