@@ -31,7 +31,7 @@ ensure kh-cityhall
 ```
 
 ## Screenshots
-![City Services]([https://cdn.discordapp.com/attachments/1045818735484747826/1137012461204144170/mainpage.png])
+![City Services][https://cdn.discordapp.com/attachments/1045818735484747826/1137012461204144170/mainpage.png]
 ![Apply For a Job]([https://cdn.discordapp.com/attachments/1045818735484747826/1137012462336610355/jobspage.png])
 ![Get New ID Card]([https://cdn.discordapp.com/attachments/1045818735484747826/1137012461611008141/servicespage.png])
 
