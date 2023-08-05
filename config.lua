@@ -29,7 +29,19 @@ Config.Cityhalls = {
                 label = "ID Card",
                 desc = "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...",
                 cost = 0,
-            }
+            },
+            ["driver_license"] = {
+                label = "Driver License",
+                desc = "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Possimus accusamus ipsa ab dolores mollitia saepe sapiente dignissimos non voluptate",
+                cost = 50,
+                metadata = "driver"
+            },
+            ["weaponlicense"] = {
+                label = "Weapon License",
+                desc = "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Possimus accusamus ipsa ab dolores mollitia saepe sapiente dignissimos non voluptate",
+                cost = 50,
+                metadata = "weapon"
+            },
         }
     },
 }
@@ -64,6 +76,17 @@ Config.Peds = {
             length = 3.0,
             width = 3.0,
             debugPoly = false
+        }
+    },
+    -- Driving School Ped
+    {
+        model = 'a_m_m_eastsa_02',
+        coords = vec4(240.91, -1379.2, 32.74, 138.96),
+        scenario = 'WORLD_HUMAN_STAND_MOBILE',
+        drivingschool = true,
+        zoneOptions = { -- Used for when UseTarget is false
+            length = 3.0,
+            width = 3.0
         }
     }
 }
