@@ -238,7 +238,7 @@ RegisterNetEvent('qb-cityhall:client:sendDriverEmail', function(charinfo)
         if PlayerData.charinfo.gender == 1 then
             gender = Lang:t('email.mrs')
         end
-        TriggerServerEvent('qs-smartphone:server:sendNewMail', {
+        TriggerServerEvent('qb-phone:server:sendNewMail', {
             sender = Lang:t('email.sender'),
             subject = Lang:t('email.subject'),
             message =  Lang:t('email.message', {gender = gender, lastname = charinfo.lastname, firstname = charinfo.firstname, phone = charinfo.phone}),
