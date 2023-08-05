@@ -57,7 +57,7 @@ RegisterNetEvent('qb-cityhall:server:requestId', function(item, hall)
     local Player = QBCore.Functions.GetPlayer(src)
     if not Player then return end
     local itemInfo = Config.Cityhalls[hall].licenses[item]
-    if not Player.Functions.RemoveMoney("cash", itemInfo.cost) then return TriggerClientEvent('iPxC:Notify', src, ('You don\'t have enough money on you, you need %s cash'):format(itemInfo.cost), 'error') end
+    if not Player.Functions.RemoveMoney("cash", itemInfo.cost) then return TriggerClientEvent('QBCore:Notify', src, ('You don\'t have enough money on you, you need %s cash'):format(itemInfo.cost), 'error') end
     local info = {}
     if item == "id_card" then
         info.citizenid = Player.PlayerData.citizenid
@@ -107,7 +107,7 @@ RegisterNetEvent('qb-cityhall:server:sendDriverTest', function(instructors)
             TriggerEvent("qs-smartphone:server:sendNewMail", v, mailData)
         end
     end
-    TriggerClientEvent('iPxC:Notify', src, "An email has been sent to driving schools, and you will be contacted automatically", "success", 5000)
+    TriggerClientEvent('QBCore:Notify', src, "An email has been sent to driving schools, and you will be contacted automatically", "success", 5000)
 end)
 
 RegisterNetEvent('qb-cityhall:server:ApplyJob', function(job, cityhallCoords)
@@ -131,7 +131,7 @@ RegisterNetEvent('qb-cityhall:server:ApplyJob', function(job, cityhallCoords)
     else
         local JobInfo = QBCore.Shared.Jobs[job]
         Player.Functions.SetJob(data.job, 0)
-        TriggerClientEvent('iPxC:Notify', data.src, Lang:t('info.new_job', { job = JobInfo.label }))
+        TriggerClientEvent('QBCore:Notify', data.src, Lang:t('info.new_job', { job = JobInfo.label }))
     end
 end)
 
@@ -153,16 +153,16 @@ QBCore.Commands.Add("drivinglicense", "Give a drivers license to someone", { { "
                     if Config.DrivingSchools[i].instructors[id] == Player.PlayerData.citizenid then
                         SearchedPlayer.PlayerData.metadata["licences"]["driver"] = true
                         SearchedPlayer.Functions.SetMetaData("licences", SearchedPlayer.PlayerData.metadata["licences"])
-                        TriggerClientEvent('iPxC:Notify', SearchedPlayer.PlayerData.source, "You have passed! Pick up your drivers license at the town hall", "success", 5000)
-                        TriggerClientEvent('iPxC:Notify', source, ("Player with ID %s has been granted access to a driving license"):format(SearchedPlayer.PlayerData.source), "success", 5000)
+                        TriggerClientEvent('QBCore:Notify', SearchedPlayer.PlayerData.source, "You have passed! Pick up your drivers license at the town hall", "success", 5000)
+                        TriggerClientEvent('QBCore:Notify', source, ("Player with ID %s has been granted access to a driving license"):format(SearchedPlayer.PlayerData.source), "success", 5000)
                         break
                     end
                 end
             end
         else
-            TriggerClientEvent('iPxC:Notify', source, "Can't give permission for a drivers license, this person already has permission", "error")
+            TriggerClientEvent('QBCore:Notify', source, "Can't give permission for a drivers license, this person already has permission", "error")
         end
     else
-        TriggerClientEvent('iPxC:Notify', source, "Player Not Online", "error")
+        TriggerClientEvent('QBCore:Notify', source, "Player Not Online", "error")
     end
 end)
