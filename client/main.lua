@@ -154,7 +154,7 @@ local function spawnPeds()
                 }
             end
             if opts then
-                exports['ipx-target']:AddTargetEntity(ped, {
+                exports['qb-target']:AddTargetEntity(ped, {
                     options = { opts },
                     distance = 2.0
                 })
