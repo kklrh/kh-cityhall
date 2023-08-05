@@ -139,6 +139,7 @@ local function spawnPeds()
                     label = 'Take Driving Lessons',
                     icon = 'fa-solid fa-car-side',
                     action = function()
+                        closestDrivingSchool = getClosestSchool()
                         TriggerServerEvent('qb-cityhall:server:sendDriverTest', Config.DrivingSchools[closestDrivingSchool].instructors)
                     end
                 }
@@ -338,6 +339,7 @@ CreateThread(function()
                 elseif inRangeDrivingSchool then
                     sleep = 0
                     if IsControlJustPressed(0, 38) then
+                        closestDrivingSchool = getClosestSchool()
                         TriggerServerEvent('qb-cityhall:server:sendDriverTest', Config.DrivingSchools[closestDrivingSchool].instructors)
                         sleep = 5000
                         exports['qb-core']:KeyPressed()
